@@ -3,8 +3,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "fcntl"
   spec.version       = "0.0.1"
-  spec.authors       = ["SHIBATA Hiroshi"]
-  spec.email         = ["hsbt@ruby-lang.org"]
+  spec.authors       = ["Yukihiro Matsumoto"]
+  spec.email         = ["matz@ruby-lang.org"]
 
   spec.summary       = "Loads constants defined in the OS fcntl.h C header file"
   spec.description   = "Loads constants defined in the OS fcntl.h C header file"
