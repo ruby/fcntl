@@ -10,4 +10,4 @@ end
 require 'rake/extensiontask'
 Rake::ExtensionTask.new("fcntl")
 
-task :default => :test
+task :default => :compile
