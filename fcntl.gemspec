@@ -1,8 +1,10 @@
 # coding: utf-8
+# frozen_string_literal: true
 
 Gem::Specification.new do |spec|
   spec.name          = "fcntl"
   spec.version       = "0.0.1"
+  spec.date          = '2017-02-10'
   spec.authors       = ["Yukihiro Matsumoto"]
   spec.email         = ["matz@ruby-lang.org"]
 
@@ -19,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.5.0dev"
 
   spec.add_development_dependency "bundler", "~> 1.14"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 12"
   spec.add_development_dependency "rake-compiler"
 end
