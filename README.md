@@ -1,8 +1,13 @@
 # Fcntl
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fcntl`. To experiment with that code, run `bin/console` for an interactive prompt.
+Fcntl loads the constants defined in the system's `<fcntl.h>` C header file, and used with both the fcntl(2) and open(2) POSIX system calls.
 
-TODO: Delete this and the text above, and describe your gem
+ * To perform a fcntl(2) operation, use IO::fcntl.
+ * To perform an open(2) operation, use IO::sysopen.
+
+The set of operations and constants available depends upon specific operating system.  Some values listed below may not be supported on your system.
+
+See your fcntl(2) man page for complete details.
 
 ## Installation
 
@@ -22,7 +27,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Open /tmp/tempfile as a write-only file that is created if it doesn't
+exist:
+
+```
+require 'fcntl'
+
+fd = IO.sysopen('/tmp/tempfile',
+                Fcntl::O_WRONLY | Fcntl::O_EXCL | Fcntl::O_CREAT)
+f = IO.open(fd)
+f.syswrite("TEMP DATA")
+f.close
+```
+
+Get the flags on file +s+:
+
+```
+m = s.fcntl(Fcntl::F_GETFL, 0)
+```
+
+Set the non-blocking flag on +f+ in addition to the existing flags in +m+.
+
+```
+f.fcntl(Fcntl::F_SETFL, Fcntl::O_NONBLOCK|m)
 
 ## Development
 
