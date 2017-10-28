@@ -50,6 +50,7 @@ Set the non-blocking flag on +f+ in addition to the existing flags in +m+.
 
 ```
 f.fcntl(Fcntl::F_SETFL, Fcntl::O_NONBLOCK|m)
+```
 
 ## Development
 
