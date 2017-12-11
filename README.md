@@ -1,5 +1,7 @@
 # Fcntl
 
+[![Build Status](https://travis-ci.org/ruby/fcntl.svg?branch=master)](https://travis-ci.org/ruby/fcntl)
+
 Fcntl loads the constants defined in the system's `<fcntl.h>` C header file, and used with both the fcntl(2) and open(2) POSIX system calls.
 
  * To perform a fcntl(2) operation, use IO::fcntl.
