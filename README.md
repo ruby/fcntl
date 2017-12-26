@@ -29,10 +29,10 @@ Or install it yourself as:
 
 ## Usage
 
-Open /tmp/tempfile as a write-only file that is created if it doesn't
+Open `/tmp/tempfile` as a write-only file that is created if it doesn't
 exist:
 
-```
+```ruby
 require 'fcntl'
 
 fd = IO.sysopen('/tmp/tempfile',
@@ -42,15 +42,15 @@ f.syswrite("TEMP DATA")
 f.close
 ```
 
-Get the flags on file +s+:
+Get the flags on file `s`:
 
-```
+```ruby
 m = s.fcntl(Fcntl::F_GETFL, 0)
 ```
 
-Set the non-blocking flag on +f+ in addition to the existing flags in +m+.
+Set the non-blocking flag on `f` in addition to the existing flags in `m`.
 
-```
+```ruby
 f.fcntl(Fcntl::F_SETFL, Fcntl::O_NONBLOCK|m)
 ```
 
