@@ -5,5 +5,5 @@ gemspec
 group :development do
   gem "bundler"
   gem "rake"
-  gem "test-unit"
+  gem "rake-compiler"
 end
