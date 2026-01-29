@@ -25,6 +25,6 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
+    - run: gem install rake-compiler
     - name: Run test
-      run: bundle exec rake compile
+      run: rake compile
